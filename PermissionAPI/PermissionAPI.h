@@ -55,7 +55,7 @@ public:
      */
     void init(HMODULE hModule = nullptr) {
         if (!hModule) {
-            auto pPtr = LL::getPlugin("PermissionAPI");
+            auto pPtr = ll::getPlugin("PermissionAPI");
             if (!pPtr) {
                 throw std::runtime_error("Cannot get the plugin object");
             }
@@ -79,7 +79,7 @@ public:
     }
     
     PermissionAPI(bool option = false) {
-        if (!LL::hasPlugin("PermissionAPI")) {
+        if (!ll::hasPlugin("PermissionAPI")) {
             if (!option) {
                 throw std::runtime_error("Dependency plugin PermissionAPI not found");
             }
