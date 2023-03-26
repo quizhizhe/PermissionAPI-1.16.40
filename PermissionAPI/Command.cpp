@@ -987,7 +987,7 @@ public:
         reg->registerCommand("perm", "Permission role system",
                              CommandPermissionLevel::Any,
                              {CommandFlagValue::None},
-                             {(CommandFlagValue)0x80});
+                             {(CommandFlagValue)0x40});
 
         reg->addEnum<SubCommands>("Create", {{"create", SubCommands::Create}});
         reg->addEnum<SubCommands>("Delete", {{"delete", SubCommands::Delete}});
